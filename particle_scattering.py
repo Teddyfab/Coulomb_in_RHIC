@@ -15,22 +15,20 @@ from random import random
 
 class Particle(object):
     
-    def __init__(self, x, y, vx, vy, ax, ay,location, energy):
+    def __init__(self, x, y, vx, vy, p, E):
         self.x = x
         self.y = y
         self.vx = vx
         self.vy = vy
-        self.ax = ax
-        self.ay = ay
-        self.id = Particle.next_id
-        Particle.next_id += 1
+        self.p = p
+        self.E = E
 
         return "Halu Teddo ....................... booom"
              
     def print_particle(self):
         
-        return "the location of the particle is", "(", self.x, self.y, ")"
-        return "the kinetic energy of the particle is", self.energy
+        return "the location of the particles", "(", self.x, self.y, ")"
+        return "the momentum and kinetic energy of the particles ", self.p, self.energy
      
     def location(self):
         for i in range (0,100):
