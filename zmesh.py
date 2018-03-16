@@ -1,43 +1,63 @@
-""" Creat the mesh and work on it""""
+#! /usr/bin/env python
 
+from random import random
 import numpy as np
-import scipy.interpolate as interp
-import bpy
+import math
 
 
-# Settings
-name = 'zmesh'
-rows = 200
-columns = 200
-width = 200
-size = 1
+new_x = 0
+new_y = 0
 
-class zmesh(object):
-  
-  
-  def __init__(self,grid_max, time):
-    
-    xymax = grid_max*(1 - 1/nsteps) # the midpoint of a cell
+def __init__(self, x, y, z, norm):
+	self.x = x
+	self.y = y
+        self.z = z
+        self.norm = norm
+
+def greetings():
+       
+        print(r"""  Halu Teddo       """)
+	
+def location():
+        for i in range (0,1000):
+            x = random()*2
+            y = random()
+            
+            print  x,"   ",y
+
+def zmesh():
+
+	grid_max = 5.0
+        nsteps = 100
+        xymax = grid_max*(1 - 1/nsteps)
+    	s = np.s_[-xymax:xymax:nsteps*1j]
+    	Y, X = np.mgrid[s, s]	
+
+
+	grid_max = 200
+	u = np.linspace(-200, 200, 400)
+	X, Y = np.meshgrid(u, u)
+        '''for j in range (1,400):
+		xymax = 200 - 200/j
+		print xymax '''
+	print  X,Y
+
+	
+	# we compute the Z values
+	#R = (X**2 + Y**2)*0.5
+	#Z = sin(R)
+
+                
+def move():
+     new_x += x
+     new_y += y
+
+if __name__ == '__main__':
+    greetings()
+   # location()
+    zmesh()
    
-
-  def vert(column, row, width):
-      """ Create a single vert """
-
-    return (column * size, row * size, width*size)
-
-  # creating the grid
-    verts = [vert(x, y, z) for x in range(columns) for y in range(rows) for z in range(width)]
- 
-  # Create Mesh Datablock
-    mesh = bpy.data.meshes.new(name)
    
-  # Create Object and link to scene
-   obj = bpy.data.objects.new(name, mesh)
-   bpy.context.scene.objects.link(obj)
-
-  # Select the object
-   bpy.context.scene.objects.active = obj
-   obj.select = True
 
 
         
