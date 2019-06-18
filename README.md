@@ -1,3 +1,0 @@
-# cheers-to-coulomb
- 
- 
