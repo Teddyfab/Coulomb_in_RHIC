@@ -70,10 +70,9 @@ void Emission_Function() {
 *************************************************************************************/
 
 int main() {
-     double tau;             
+     //double tau;             
      
      Emission_Function();
-    
-     
+   
   return 0;
 }
