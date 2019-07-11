@@ -4,6 +4,17 @@
 #include <cmath>
 #include <complex>
 
+const double tau_0 = 9;        // fm/c - Average freezout proper time
+const double delta_tau = 2;    // fm/c - Mean proper time duration of particle emission
+const double T = 0.1;          // GeV - freezout temperature
+const double a_s = 0.3;        // Surface diffusness of the source emission
+const double rho_0 = 0.9;
+const double rho_2 = 0.05;      /*  rho_2  - characterizes the strength of  the second-order oscillation of 
+                                    the transverse rapidity as a function of phi_b */
+const double Rx = 11;           // fm  
+const double Ry = 13;           // fm    Radii =>  Ry > Rx
+const double Y =0;
+
 const double c = 1; //2.99e23;    // c = 2.99792458 [fm/s]
 const double fm = 10e-15; 
 const double ZERO         = 0.0;
