@@ -45,10 +45,22 @@ struct Pstatus {
   double t{0};
   VecR3<double> p{0, 0, 0};      // to say : position of particle 1
   VecR3<double> v{0, 0, 0};      //          velocity of particle 1
+  double r{0};
+  double phi_s{0};
+  double phi_b{0}; 
+  double r_norm{0};
+  double rho{0};
+  double tau{0};
+  double alpha{0};
+  double beta{0};
+  double S{0};
+  double Omega{0};
+  double eta{0};
+  //double eta2{0};
 };
  struct Pstatus5 {
   double t{0};
-  VecR3<double> p{0, 0, 0};      // to say : position of particle 1
+  VecR3<double> p{0, 0, 0};         // to say : position of particle 1
   //VecR3<double> v{0, 0, 0};      //          velocity of particle 1
   VecR3<double> pa[5]{{0, 0, 0},{0, 0, 0},{0, 0, 0},{0, 0, 0},{0, 0, 0}};
  };
